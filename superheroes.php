@@ -65,8 +65,58 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<?php 
+
+// Function to determine whether the query passed 
+// is in the hero list. 
+
+function isHero($heroList, $hero)
+{
+    foreach ($heroList as $superhero) {
+        if( ( strtoupper($superhero['name'])==strtoupper($hero) )
+            ||  ( strtoupper($superhero['alias'])==strtoupper($hero) ) 
+          ){
+          return [true,$superhero];
+        }
+      }
+      return [false];
+}
+
+$query = filter_var($_GET["query"], FILTER_SANITIZE_STRING);
+
+if($query == "")
+{
+    echo "<h1> Hero List </h1>";
+    echo "<ul>";
+    foreach ($superheroes as $superhero){
+      $alias = $superhero['alias'];
+      echo "<li> $alias </li>";
+    }
+    echo "</ul>";
+    echo "<hr />";
+}
+$isQueryValid = isHero($superheroes,$query);
+
+
+if(!$isQueryValid[0])
+{
+    echo "<p class=\"notFound\">SUPERHERO NOT FOUND</p>";
+    echo "<hr />";
+}
+else{
+    $hero = $isQueryValid[1];
+    $alias = $hero['alias']; 
+    $name = $hero['name'];
+    $bio = $hero['biography'];
+    echo "<h3>$alias</h3>";
+    echo "<h4>A.K.A $name</h4>";
+    echo "<p class=\"bio\">$bio</p>";
+    echo "<hr />";
+}
+
+
+
+?>
+
+
+

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avengers Character Search</title>
-    <script src="./app.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 
 <body>
@@ -16,17 +16,29 @@
     </header>
 
     <section class="searchSection">
-        <h4>Search for your Hero! Use Full Name or Alias</h4>
+        <h4>Seach by Full Name or Alias</h4>
         <form class="inputForm" action="#" method="post">
-            <input type="text" name="Text" value="" id="formInpt"
-                placeholder="eg. 'Steve Rogers' or 'Captain America' ">
+            <input type="text" name="Text" value="" id="formInput" placeholder="eg. Captain America or Steve Rogers">
             <input type="submit" name="Submit" value="Search" id="Searchbtn">
         </form>
 
     </section>
 
+    <section class="resultSection">
+        <div class="rSec_container">
+            <h2>RESULT</h2>
+            <hr>
+            <div id="result"> </div>
+            <footer>
+                <div class="footerContainer">
+                    Copyright 2021@Patrick Witter
+                </div>
+            </footer>
+        </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
