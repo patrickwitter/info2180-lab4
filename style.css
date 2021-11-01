@@ -66,7 +66,7 @@ body {
     padding: 12px 12px 12px 12px;
   }
 
-  #searchbtn{
+  #Searchbtn{
     background-color: #B00101;
     border: none;
     border-radius: 5px;
@@ -75,7 +75,7 @@ body {
     margin: 0px 0px;
     padding: 12px 0;
   }
-  #searchbtn:hover{
+  #Searchbtn:hover{
     background-color: #E70000;
     cursor: pointer;
   }
