@@ -1,0 +1,97 @@
+/* General Styling and Layout */
+
+body {
+    background-color: #FAF9F9;
+    font-family: 'Cutive Mono', sans-serif;
+    font-size: 20px;
+  }
+  
+  li {
+    color: #262566;
+    font-style: oblique;
+    font-weight: bolder;
+  }
+  
+  h1{
+    font-size: 40px;
+  }
+  
+  
+  h2{
+    color: red;
+  }
+  
+  
+  h3 {
+    color: #262566;
+    font-style: oblique;
+    font-weight: bolder;
+  }
+  h4 {
+    color: #262566;
+    font-style: oblique;
+    font-weight: bolder;
+  }
+  
+  .bio{
+    color: #262566;
+  }
+  
+  header{
+    background-color: #E70000;
+  }
+  
+  .headerContainer, .rSecsContainer, .footerContainer {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 2% 2% 2% 2%;
+    width: 100%;
+  }
+  
+  /* End General Styling and Layout */
+
+  /* Form  */
+  .Form{
+    display: grid;
+    grid-template-rows: 120%;
+    grid-template-columns: 80% 20%;
+  }
+  
+  #formInput{
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 5px #E2E8F0;
+    margin: 0px 0px;
+    padding: 12px 12px 12px 12px;
+  }
+
+  #searchbtn{
+    background-color: #B00101;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    margin: 0px 0px;
+    padding: 12px 0;
+  }
+  #searchbtn:hover{
+    background-color: #E70000;
+    cursor: pointer;
+  }
+  
+  /* End Form */
+
+  .headerContainer{
+    align-items: center;
+    color: #FFFDEF;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .rSec_Container{
+    background-color: #FFFDBB;
+  }
+  
+ 
+  

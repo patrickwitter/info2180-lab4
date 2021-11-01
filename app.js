@@ -13,6 +13,7 @@ $(document).ready(function () {
         fetch(`./superheroes.php?query=${searchTxt}`)
             .then(response => response.text())
             .then(result => {
+                resSection.html("");
                 resSection.append(result);
             })
             .catch(err => console.log(err))
@@ -21,25 +22,3 @@ $(document).ready(function () {
     });
 });
 
-
-// "use strict"
-
-// $(document).ready(function () {
-//     console.log("Doc loaded");
-//     $('#Searchbtn').click(function (e) {
-//         e.preventDefault();
-//         console.log("Clicked");
-
-//         let inputTxt = $('#formInput').val().trim().replace(/[^a-z0-9áéíóúñü \.,_-]/gim, "");
-
-//         $('#result').html("");
-
-//         fetch(`./superheroes.php?query=${inputTxt}`)
-//             .then(response => response.text())
-//             .then(data => {
-//                 $('#result').append(data);
-//             })
-//             .catch(err => console.error(err))
-
-//     });
-// });
